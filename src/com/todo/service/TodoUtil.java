@@ -21,7 +21,7 @@ public class TodoUtil {
 		
 		title = sc.next();
 		if (list.isDuplicate(title)) {
-			System.out.printf("title can't be duplicate");
+			System.out.printf("title can't be duplicate\n");
 			return;
 		}
 		sc.nextLine();
