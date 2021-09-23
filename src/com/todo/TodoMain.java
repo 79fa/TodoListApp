@@ -24,6 +24,7 @@ public class TodoMain {
 			isList = false;
 			//System.out.print("Enter your choice >");
 			Menu.prompt();
+			System.out.println("");
 			String choice = sc.next();
 			
 			

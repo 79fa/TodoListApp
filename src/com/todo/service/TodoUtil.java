@@ -105,6 +105,7 @@ public class TodoUtil {
 				l.addItem(a);
 	            //System.out.println(str);
 	        }
+			System.out.println("파일을 읽었습니다.");
 			
 			reader.close();
 			
