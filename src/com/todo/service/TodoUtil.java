@@ -122,7 +122,7 @@ public class TodoUtil {
 		
 		for (TodoItem item : l.getList()) {
 			String str=item.toSaveString();
-			System.out.println(str);
+			//System.out.println(str);
 			writer.write(str);
 		}
 		writer.close();
