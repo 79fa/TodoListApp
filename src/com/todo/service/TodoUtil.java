@@ -89,7 +89,7 @@ public class TodoUtil {
 
 	public static void listAll(TodoList l) {
 		for (TodoItem item : l.getList()) {
-			System.out.println("Item Title: " + item.getTitle() + "  Item Description:  " + item.getDesc());
+			System.out.println("Item Title: " + item.getTitle() + "  Item Description:  " + item.getDesc()+"  "+item.getCurrent_date());
 		}
 	}
 	public static void loadList(TodoList l,String filename) {
