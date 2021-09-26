@@ -7,6 +7,10 @@ import com.todo.service.TodoSortByName;
 
 public class TodoList {
 	private List<TodoItem> list;
+	
+	public void at(int n) {
+		list.remove(n-1);
+	}
 
 	public TodoList() {
 		this.list = new ArrayList<TodoItem>();
@@ -36,16 +40,22 @@ public class TodoList {
 	}
 
 	public void listAll() {
-		System.out.println("\n"
-				+ "inside list_All method\n");
+		
+		System.out.println("Number of Items  "+list.size());
+		int count1=1;
 		for (TodoItem myitem : list) {
 			//System.out.println(myitem.getTitle() +"    "+ myitem.getDesc()+);
-			System.out.println("Item Title: " + myitem.getTitle() + "  Item Description:  " + myitem.getDesc()+"  "+myitem.getCurrent_date());
+			System.out.println(count1+". ["+myitem.getCategory()+"] " + myitem.getTitle()+" - " + myitem.getDesc()+" - "+myitem.getDue_date()+" - "+myitem.getCurrent_date());
+			count1++;
 		}
 	}
 	
 	public void reverseList() {
 		Collections.reverse(list);
+	}
+	
+	public int size1() {
+		return list.size();
 	}
 
 	public void sortByDate() {

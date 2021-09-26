@@ -29,13 +29,27 @@ public class TodoMain {
 			
 			
 			switch (choice) {
-
+			case "ls_cate"://떠오른 생각은 한 문자열에 더가면서 거기 안에 있나 확인 
+				
+			case "find":
+				String keyword=sc.next();
+				TodoUtil.find(l,keyword);
+				//System.out.println(keyword);
+				break;
+			case "find_cate":
+				String keyword2=sc.next();
+				TodoUtil.find_cate(l,keyword2);
+				//System.out.println(keyword);
+				break;
+				
 			case "add":
 				TodoUtil.createItem(l);
 				break;
+				
 			case "help":
 				Menu.displaymenu();
 				break;
+				
 			case "del":
 				TodoUtil.deleteItem(l);
 				break;
@@ -62,6 +76,12 @@ public class TodoMain {
 			case "ls_date":
 				l.sortByDate();
 				isList = true;
+				break;
+				
+			case "ls_date_desc":
+				l.sortByDate();
+				l.reverseList();
+				isList=true;
 				break;
 
 			case "exit":
